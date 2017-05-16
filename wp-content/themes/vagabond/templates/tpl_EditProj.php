@@ -77,13 +77,14 @@ $proj_id = $_GET['proj_id'];
 
 $gantti_data = get_post_meta( $proj_id, 'gantti_data', true );
 $req_data = get_post_meta( $proj_id, 'req_data', true );
+$ary_contact_info = get_post_meta( $proj_id, 'contact_info', true );
 
 $ary_com_profile = get_option('company_profile');
 $com_title = $ary_com_profile['com_title'];
 $com_num = $ary_com_profile['com_num'];
 $com_adds = $ary_com_profile['com_adds'];
 
-//print_r($req_data);
+//print_r($ary_contact_info);
 
 if (empty($gantti_data[0]['label']) || !is_array($gantti_data))
 {
@@ -162,7 +163,26 @@ if ( empty($_POST) || !wp_verify_nonce($_POST['editproj_nonce'],'') )
 	if(isset($_POST['proj_file_url'])) $proj_file_url = $_POST['proj_file_url'];
 	if(isset($_POST['host_info'])) $host_info = $_POST['host_info'];
 	if(isset($_POST['bill_detail'])) $bill_detail = $_POST['bill_detail'];
-	
+
+	$ary_contact_info = array();
+	if(isset($_POST['contract_com_name_a'])) $ary_contact_info['contract_com_name_a'] = $_POST['contract_com_name_a'];
+	if(isset($_POST['contract_com_name_b'])) $ary_contact_info['contract_com_name_b'] = $_POST['contract_com_name_b'];
+	if(isset($_POST['contract_cont_person_a'])) $ary_contact_info['contract_cont_person_a'] = $_POST['contract_cont_person_a'];
+	if(isset($_POST['contract_cont_person_b'])) $ary_contact_info['contract_cont_person_b'] = $_POST['contract_cont_person_b'];
+	if(isset($_POST['contract_cont_tel_a'])) $ary_contact_info['contract_cont_tel_a'] = $_POST['contract_cont_tel_a'];
+	if(isset($_POST['contract_cont_tel_b'])) $ary_contact_info['contract_cont_tel_b'] = $_POST['contract_cont_tel_b'];
+	if(isset($_POST['contract_cont_email_a'])) $ary_contact_info['contract_cont_email_a'] = $_POST['contract_cont_email_a'];
+	if(isset($_POST['contract_cont_email_b'])) $ary_contact_info['contract_cont_email_b'] = $_POST['contract_cont_email_b'];
+	if(isset($_POST['contract_cont_adds_a'])) $ary_contact_info['contract_cont_adds_a'] = $_POST['contract_cont_adds_a'];
+	if(isset($_POST['contract_cont_adds_b'])) $ary_contact_info['contract_cont_adds_b'] = $_POST['contract_cont_adds_b'];
+	if(isset($_POST['contract_cont_taxid_a'])) $ary_contact_info['contract_cont_taxid_a'] = $_POST['contract_cont_taxid_a'];
+	if(isset($_POST['contract_cont_taxid_b'])) $ary_contact_info['contract_cont_taxid_b'] = $_POST['contract_cont_taxid_b'];
+	if(isset($_POST['contract_memo'])) $ary_contact_info['contract_memo'] = $_POST['contract_memo'];
+	if(isset($_POST['contract_desc'])) $ary_contact_info['contract_desc'] = $_POST['contract_desc'];
+	if(isset($_POST['contract_need_payway'])) $ary_contact_info['contract_need_payway'] = $_POST['contract_need_payway'];
+	if(isset($_POST['contract_need_contract'])) $ary_contact_info['contract_need_contract'] = $_POST['contract_need_contract'];
+	update_post_meta( $proj_id, 'contact_info', $ary_contact_info );
+
 	$the_proj = array();
 	$the_proj['post_author'] = wp_get_current_user()->ID;
 	$the_proj['post_date'] = gmdate("Y:m:d H:i:s", time()+3600*8);
@@ -220,6 +240,22 @@ $bill_detail = get_post_meta($proj_id, 'bill_detail', true);
 $tag_names = wp_get_post_tags( $proj_id, array( 'fields' => 'names' ) );
 $proj_state = join( ",", $tag_names );
 
+$contract_com_name_a = $ary_contact_info['contract_com_name_a'];
+$contract_com_name_b = $ary_contact_info['contract_com_name_b'];
+$contract_cont_person_a = $ary_contact_info['contract_cont_person_a'];
+$contract_cont_person_b = $ary_contact_info['contract_cont_person_b'];
+$contract_cont_tel_a = $ary_contact_info['contract_cont_tel_a'];
+$contract_cont_tel_b = $ary_contact_info['contract_cont_tel_b'];
+$contract_cont_email_a = $ary_contact_info['contract_cont_email_a'];
+$contract_cont_email_b = $ary_contact_info['contract_cont_email_b'];
+$contract_cont_adds_a = $ary_contact_info['contract_cont_adds_a'];
+$contract_cont_adds_b = $ary_contact_info['contract_cont_adds_b'];
+$contract_cont_taxid_a = $ary_contact_info['contract_cont_taxid_a'];
+$contract_cont_taxid_b = $ary_contact_info['contract_cont_taxid_b'];
+$contract_memo = $ary_contact_info['contract_memo'];
+$contract_desc = $ary_contact_info['contract_desc'];
+$contract_need_payway = $ary_contact_info['contract_need_payway'];
+$contract_need_contract = $ary_contact_info['contract_need_contract'];
 ?>
 <style>
 .rborder1{border-right:1px solid #eeeeee;}
@@ -526,7 +562,7 @@ $proj_state = join( ",", $tag_names );
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon"><?php _e('甲方', $VagabondPM::SLUG);?></span>
-						<input type="text" class="form-control" name="contract_pa_name" id="contract_pa_name" value="<?php echo $contract_pa_name;?>" placeholder="<?php _e('Customer Title', $VagabondPM::SLUG);?>"> 
+						<input type="text" class="form-control" name="contract_com_name_a" id="contract_com_name_a" value="<?php echo $contract_com_name_a;?>" placeholder="<?php _e('Customer Title', $VagabondPM::SLUG);?>"> 
 					</div>
 				</div>
 			</div>
@@ -534,7 +570,7 @@ $proj_state = join( ",", $tag_names );
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon"><?php _e('乙方', $VagabondPM::SLUG);?></span>
-						<input type="text" class="form-control" name="contract_pb_name" id="contract_pb_name" value="<?php echo $com_title;?>" placeholder="<?php _e('My Company Name', $VagabondPM::SLUG);?>"> 
+						<input type="text" class="form-control" name="contract_com_name_b" id="contract_com_name_b" value="<?php echo $contract_com_name_b;?>" placeholder="<?php _e('My Company Name', $VagabondPM::SLUG);?>"> 
 					</div>
 				</div>
 			</div>
@@ -606,7 +642,7 @@ $proj_state = join( ",", $tag_names );
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon"><?php _e('Address', $VagabondPM::SLUG);?></span>
-						<input type="address" class="form-control" name="contract_cont_adds_b" id="contract_cont_adds_b" value="<?php echo $com_adds;?>">
+						<input type="address" class="form-control" name="contract_cont_adds_b" id="contract_cont_adds_b" value="<?php echo $contract_cont_adds_b;?>">
 					</div>
 				</div>
 			</div>
@@ -625,7 +661,7 @@ $proj_state = join( ",", $tag_names );
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon"><?php _e('Tax ID', $VagabondPM::SLUG);?></span>
-						<input type="address" class="form-control" name="contract_cont_taxid_b" id="contract_cont_taxid_b" value="<?php echo $com_num;?>">
+						<input type="address" class="form-control" name="contract_cont_taxid_b" id="contract_cont_taxid_b" value="<?php echo $contract_cont_taxid_b;?>">
 					</div>
 				</div>
 			</div>
@@ -634,7 +670,7 @@ $proj_state = join( ",", $tag_names );
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="form-group">
-					<textarea class="form-control" name="contract_memo" placeholder="需求備註"></textarea>
+					<textarea class="form-control" name="contract_memo" placeholder="合約備註"><?php echo $contract_memo;?></textarea>
 				</div>
 			</div>
 		</div>
@@ -649,13 +685,13 @@ $proj_state = join( ",", $tag_names );
 		<div class="row">
 			<div class="col-sm-3">
 				<div class="checkbox">
-					<input type="checkbox" name="contract_need_payway" checked>
+					<input type="checkbox" name="contract_need_payway" value="yes" checked>
 					加入付款方式
 				</div>
 			</div>
 			<div class="col-sm-3">
 				<div class="checkbox">
-					<input type="checkbox" name="contract_need_contract" checked>
+					<input type="checkbox" name="contract_need_contract" value="yes" checked>
 					加入合約內容
 				</div>
 			</div>
@@ -697,9 +733,17 @@ $proj_state = join( ",", $tag_names );
 
 
 			<ul>
-			狀態：<input type="text" name="proj_state" id="proj_state" value="<?php echo $proj_state;?>" placeholder="例：洽談、開工、驗收..等，以,區隔" style="width:210px">
+			狀態標籤：<input type="text" name="proj_state" id="proj_state" value="<?php echo $proj_state;?>" placeholder="例：洽談、開工、驗收..等，以,區隔" class="form-control" style="">
 			報價：<input type="text" name="proj_price" id="proj_price" value="<?php echo $proj_price;?>">
 			應收帳款：<input type="text" name="proj_no_paid" id="proj_no_paid" value="<?php echo $proj_no_paid;?>">
+
+		<h3>報價單明細</h3>
+			<ul>
+				<textarea cols="100" rows="10" name="bill_detail" id="bill_detail"><?php echo $bill_detail;?></textarea>
+			</ul>
+		<h3>專案備註</h3>
+			<ul>
+				<textarea cols="100" rows="10" name="proj_memo" id="proj_memo"><?php echo $proj_memo;?></textarea>
 			</ul>
 
 		<input type="submit" class="btn btn-primary" value="確定">
@@ -784,6 +828,8 @@ $(function(){
 				//console.log(res);
 				if (res.code=='1'){
 					window.open(res.url, '_blank');
+				}else{
+					alert('error.');
 				}
 			},
 			error:function (xhr, ajaxOptions, thrownError){

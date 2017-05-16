@@ -24,16 +24,20 @@ get_header(); ?>
 	<div class="wrap">
 		<ul id="columns">
 		<?php
+		$pages_to_ids = get_option("vpm_page_ids");
+		$page_id_pj_edit = $pages_to_ids['Edit Project'];
+
 		$ori_query_obj = $wp_query;
 		$wp_query = null;
 		$wp_query = new WP_Query();
 		$wp_query->query('post_type=proj&posts_per_page=100&paged='.$paged);
 		while ($wp_query->have_posts()) :
 			$wp_query->the_post();
+			$edit_url = add_query_arg( 'proj_id', $wp_query->post->ID, get_permalink( $page_id_pj_edit ) );
 		?>
 				<li class="pin">
 					<h5> 
-						<a href="<?php echo get_permalink( 20 );?>&proj_id=<?php the_ID();?>"><?php the_title(); ?></a>
+						<a href="<?php echo $edit_url;?>"><?php the_title(); ?></a>
 					</h5>
 
 					<div class="set_item">狀態: <?php the_tags('', ', ', ''); ?>  </div>

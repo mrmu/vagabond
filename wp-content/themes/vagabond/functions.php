@@ -60,6 +60,9 @@ if( !class_exists( 'VagabondPM' ) )
 
 			add_action( 'admin_menu', array($this, 'create_proj_metas', 0 ) );
 
+			add_action('after_switch_theme', array($this, 'create_vpm_pages')); 
+			add_action('switch_theme', array($this, 'remove_vpm_pages')); //when theme deactivate
+
 			add_action( 'wp_ajax_del_proj_ajax', array($this, 'del_proj_ajax' ) ); 
 			add_action( 'wp_ajax_nopriv_del_proj_ajax', array($this, 'del_proj_ajax' ) );
 
@@ -82,6 +85,68 @@ if( !class_exists( 'VagabondPM' ) )
 				// [TODO] 版本不同時要作的事..
 				update_option( self::SLUG.'_version', $this->plugin_version );
 			}
+		}
+
+		function post_exists( $id ) {	
+			return is_string( get_post_status( $id ) );
+		}
+
+		function remove_vpm_pages()
+		{
+			$pages_to_ids = get_option("vpm_page_ids");
+			if (isset($pages_to_ids) && !empty($pages_to_ids) && is_array($pages_to_ids) ) 
+			{
+				foreach ($pages_to_ids as $page_name => $page_id)
+				{
+					if (post_exists($page_id)) {
+						wp_delete_post($page_id);
+					}
+				}
+				delete_option('vpm_page_ids');
+			}
+		}
+
+		function create_vpm_pages()
+		{
+			$ary_default_vpm_pages = array(
+				'New Project' => 'templates/tpl_NewProj.php', 
+				'Edit Project' => 'templates/tpl_EditProj.php', 
+				'Project List' => 'templates/tpl_ProjList.php', 
+				'Company Profile' => 'templates/tpl_ComProfile.php'
+			);
+
+			$pages_to_ids = get_option("vpm_page_ids");
+
+			if (isset($pages_to_ids) && !empty($pages_to_ids) && is_array($pages_to_ids) ) 
+			{
+				foreach ($ary_default_vpm_pages as $def_page_name => $tpl_name)
+				{
+					if (!array_key_exists($def_page_name, $pages_to_ids)) {
+						// TBD: partial pages is gone.
+					}
+				}
+			}else{
+				// first time to create all def pages.
+				$pages_to_ids = array();
+				foreach ($ary_default_vpm_pages as $page_name => $tpl_name)
+				{
+					$new_page = array(
+						'post_title' => $page_name,
+						'post_content' => "",
+						'post_status' => "publish",
+						'post_type' => 'page',
+					);
+					$new_page_id = wp_insert_post($new_page, $error);
+					if (is_wp_error($new_page_id)) {
+						wp_die($new_page_id->get_error_message());
+					}else{
+						update_post_meta($new_page_id, "_wp_page_template", $tpl_name);
+						$pages_to_ids[$page_name] = $new_page_id;
+					}
+				}
+				update_option("vpm_page_ids", $pages_to_ids);
+			}
+
 		}
 
 		function update_gantti()
@@ -118,21 +183,20 @@ if( !class_exists( 'VagabondPM' ) )
 			$post_id = esc_attr( $_POST['post_id'] );
 			$upload_dir = wp_upload_dir();
 
-			$file_dir = $upload_dir['basedir'].'/contracts/'.$post_id.'.doc';
-			$file_url = $upload_dir['baseurl'].'/contracts/'.$post_id.'.doc';
+			$time_tag = date('YmdHis', strtotime(current_time('mysql')));
 
-			$arg = array(
-				'post_id' => $post_id,
-				'need_contract' => true,
-				'need_payway' => true
-			);
+			$file_dir = $upload_dir['basedir'].'/contracts/'.$post_id.'_'.$time_tag.'.doc';
+			$file_url = $upload_dir['baseurl'].'/contracts/'.$post_id.'_'.$time_tag.'.doc';
 
-			$this->write_to_word($file_dir, $arg);
-			update_post_meta( $post_id, 'contract_url', $file_url );
+			$ret = $this->write_to_word($file_dir, $post_id);
+			if ($ret) {
+				update_post_meta( $post_id, 'contract_url', $file_url );
+				$rtn_ary = array('code'=>'1', 'url'=>$file_url);
+			}else{
+				$rtn_ary = array('code'=>'0', 'url'=>$file_url);
+			}
 
-			$rtn_ary = array('code'=>'1', 'url'=>$upload_dir['baseurl'].'/contracts/'.$post_id.'.doc');
 			echo json_encode($rtn_ary, JSON_FORCE_OBJECT);
-
 			die();
 		}
 
@@ -524,22 +588,40 @@ if( !class_exists( 'VagabondPM' ) )
 		//
 		// @file_path	檔案路徑
 		//--------------------------------------------------------------------------------------------/
-		function write_to_word($file_path, $arg='') 
+		function write_to_word($file_path, $post_id) 
 		{
 			if (!$file_path){
 				return false;
 			}
-			if (!$arg){
+			if (empty($post_id)){
 				return false;
 			}
 
 			// 專案資訊
-			$post_id = $arg['post_id'];
 			$proj_title = get_the_title($post_id);
 			$kickoff_start = get_post_meta($post_id, 'kickoff_start', true);
 			$kickoff_end = get_post_meta($post_id, 'kickoff_end', true);
 			$work_day = get_post_meta($post_id, 'work_day', true);
 			$req_data = get_post_meta( $post_id, 'req_data', true );
+
+			// 合約資訊
+			$ary_contact_info = get_post_meta( $post_id, 'contact_info', true );
+			$contract_com_name_a = $ary_contact_info['contract_com_name_a'];
+			$contract_com_name_b = $ary_contact_info['contract_com_name_b'];
+			$contract_cont_person_a = $ary_contact_info['contract_cont_person_a'];
+			$contract_cont_person_b = $ary_contact_info['contract_cont_person_b'];
+			$contract_cont_tel_a = $ary_contact_info['contract_cont_tel_a'];
+			$contract_cont_tel_b = $ary_contact_info['contract_cont_tel_b'];
+			$contract_cont_email_a = $ary_contact_info['contract_cont_email_a'];
+			$contract_cont_email_b = $ary_contact_info['contract_cont_email_b'];
+			$contract_cont_adds_a = $ary_contact_info['contract_cont_adds_a'];
+			$contract_cont_adds_b = $ary_contact_info['contract_cont_adds_b'];
+			$contract_cont_taxid_a = $ary_contact_info['contract_cont_taxid_a'];
+			$contract_cont_taxid_b = $ary_contact_info['contract_cont_taxid_b'];
+			$contract_memo = $ary_contact_info['contract_memo'];
+			$contract_desc = $ary_contact_info['contract_desc'];
+			$contract_need_payway = $ary_contact_info['contract_need_payway'];
+			$contract_need_contract = $ary_contact_info['contract_need_contract'];
 
 			// 需求規格明細
 			$price_tot = 0;
@@ -548,12 +630,19 @@ if( !class_exists( 'VagabondPM' ) )
 			if ($req_data){
 				foreach ($req_data as $itm){
 					$price_tot += $itm['req_pay_price'];
+					$unit_name = '式';
+					if ('yearly' == $itm['req_pay_times']) {
+						$unit_name = '/年';
+					}
+					if ('monthly' == $itm['req_pay_times']) {
+						$unit_name = '/月';
+					}
 					$spec_list .= '
 						<tr>
 							<td style="width:10%;"><font face="微軟正黑體,新細明體,times,serif">'.$no.'</font></td>
 							<td style="width:30%;"><font face="微軟正黑體,新細明體,times,serif">'.$itm["req_title"].'</font></td>
 							<td style="width:10%;"><font face="微軟正黑體,新細明體,times,serif">1</font></td>
-							<td style="width:10%;"><font face="微軟正黑體,新細明體,times,serif">式</font></td>
+							<td style="width:10%;"><font face="微軟正黑體,新細明體,times,serif">'.$unit_name.'</font></td>
 							<td style="width:20%; text-align:right;"><font face="微軟正黑體,新細明體,times,serif">'.$itm["req_pay_price"].' 元</font></td>
 							<td style="width:20%; text-align:right;"><font face="微軟正黑體,新細明體,times,serif">'.$itm["req_pay_price"].' 元</font></td>
 						</tr>
@@ -568,7 +657,7 @@ if( !class_exists( 'VagabondPM' ) )
 
 			// 乙方公司資料
 			$ary_com_profile = get_option('company_profile');
-			$com_title = $ary_com_profile['com_title'];
+			// $com_title = $ary_com_profile['com_title'];
 			$bank_title = $ary_com_profile['bank_title'];
 			$bank_account = $ary_com_profile['bank_account'];
 			$bank_num = $ary_com_profile['bank_num'];
@@ -576,9 +665,9 @@ if( !class_exists( 'VagabondPM' ) )
 			$com_num = $ary_com_profile['com_num'];
 			$com_adds = $ary_com_profile['com_adds'];
 
-			if ($arg['need_contract'])
+			if ($contract_need_contract == 'yes')
 			{
-				$contract_content = "<li>合約內容：<ol><li>乙方依約需於結案時交付網站完整程式。</li><li>一年完整保固。</li><li>本專案開始前，甲乙雙方各自擁有之特有技術、營業秘密、專利權、著作權及任何其他無形資產及特有權利均歸甲、乙方各自所有；本專案內容依甲方需求規劃、開發之平台及軟體，甲方得無償使用，且可進行所有權、專利權、著作權、等其它智慧財產權申請。</li><li>保密義務：甲乙雙方對他方之營業秘密或協力廠商之相關訊息，任一方對他方均負有保密之義務。</li><li>乙方之維運服務期程係以驗收完成後起算。</li><li>準據法及管轄法院：本報價單視同合約具有同等法律效力。本報價單之準據法為中華民國法律，凡本報價單未約定之其它事項，均應依中華民國法律之規定。任何與本報價單有關或因本報價單而引起之爭議，雙方同意以台灣士林地方法院為第一審管轄法院。</li></ol></li>";
+				$contract_content = "<li>合約內容：<ol><li>乙方依約需於結案時交付網站完整程式。</li><li>一年完整保固。</li><li>本專案開始前，甲乙雙方各自擁有之特有技術、營業秘密、專利權、著作權及任何其他無形資產及特有權利均歸甲、乙方各自所有；本專案內容依甲方需求規劃、開發之平台及軟體，甲方得無償使用，且可進行所有權、專利權、著作權、等其它智慧財產權申請。</li><li>保密義務：甲乙雙方對他方之營業秘密或協力廠商之相關訊息，任一方對他方均負有保密之義務。</li><li>乙方之維運服務期程係以驗收完成後起算。</li><li>準據法及管轄法院：本報價單視同合約具有同等法律效力。本報價單之準據法為中華民國法律，凡本報價單未約定之其它事項，均應依中華民國法律之規定。任何與本報價單有關或因本報價單而引起之爭議，雙方同意以台灣士林地方法院為第一審管轄法院。</li><li>".$contract_memo."</li></ol></li>";
 
 				// 要做 minify，不然格式可能跑掉
 				// $contract_content = "
@@ -595,9 +684,10 @@ if( !class_exists( 'VagabondPM' ) )
 				// ";
 			}
 
-			if ($arg['need_payway'])
+			if ($contract_need_payway == 'yes')
 			{
-				$payway_desc = '<li>付款方式：<ul><li>專案成立簽約款：支付總價金額之20 %，新台幣 '.$ph1_price.' 元整 (含稅)。</li><li>專案上線驗收尾款：支付總價金額之80%，新台幣 '.$ph2_price.' 元整 (含稅)。</li></ul></li><li>依付款作業流程，階段成立開立發票請款：<ul><li>專案成立簽約款：開立發票請款，14日電匯入帳。</li><li>專案上線驗收完成後：開立發票請款，14日內電匯入帳。</li></ul></li>';
+				$bank_info = '<li>匯款資訊：<ul><li>銀行名稱：'.$bank_title.'</li><li>帳號：'.$bank_account.'</li><li>銀行代號：'.$bank_num.'</li><li>戶名：'.$bank_com_title.'</li></ul></li>';
+				$payway_desc = $bank_info.'<li>付款方式：<ul><li>專案成立簽約款：支付總價金額之20 %，新台幣 '.$ph1_price.' 元整 (含稅)。</li><li>專案上線驗收尾款：支付總價金額之80%，新台幣 '.$ph2_price.' 元整 (含稅)。</li></ul></li><li>依付款作業流程，階段成立開立發票請款：<ul><li>專案成立簽約款：開立發票請款，14日電匯入帳。</li><li>專案上線驗收完成後：開立發票請款，14日內電匯入帳。</li></ul></li>';
 
 				// 要做 minify，不然格式可能跑掉
 				// $payway_desc = '
@@ -688,7 +778,7 @@ if( !class_exists( 'VagabondPM' ) )
 			    <td>
 			      <div style="mso-element:header" id="h1" >
 			        <!-- HEADER-tags -->
-			            <p class=MsoHeader >'.$com_title.' - 估價單</p>
+			            <p class=MsoHeader >'.$contract_com_name_b.' - 估價單</p>
 			        <!-- end HEADER-tags -->
 			      </div>
 			    </td>
@@ -716,33 +806,33 @@ if( !class_exists( 'VagabondPM' ) )
 					</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 					<span style="font-size:15px;">
 						<font face="微軟正黑體,新細明體,times,serif">
-						(製表日期：'.current_time( 'mysql' ).')
+						(製表日期：'.date('Y年m月d日', strtotime(current_time( 'mysql' ))).')
 						</font>
 					</span>
 				</td></tr>
 				<tr>
-					<td><font face="微軟正黑體,新細明體,times,serif">甲方：XX 股份有限公司</font></td>
-					<td><font face="微軟正黑體,新細明體,times,serif">乙方：'.$com_title.'</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">甲方：'.$contract_com_name_a.'</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">乙方：'.$contract_com_name_b.'</font></td>
 				</tr>
 				<tr>
-					<td><font face="微軟正黑體,新細明體,times,serif">聯絡人：</font></td>
-					<td><font face="微軟正黑體,新細明體,times,serif">聯絡人：</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">聯絡人：'.$contract_cont_person_a.'</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">聯絡人：'.$contract_cont_person_b.'</font></td>
 				</tr>
 				<tr>
-					<td><font face="微軟正黑體,新細明體,times,serif">電話：</font></td>
-					<td><font face="微軟正黑體,新細明體,times,serif">電話：</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">電話：'.$contract_cont_tel_a.'</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">電話：'.$contract_cont_tel_b.'</font></td>
 				</tr>
 				<tr>
-					<td><font face="微軟正黑體,新細明體,times,serif">E-Mail：</font></td>
-					<td><font face="微軟正黑體,新細明體,times,serif">E-Mail：</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">E-Mail：'.$contract_cont_email_a.'</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">E-Mail：'.$contract_cont_email_b.'</font></td>
 				</tr>
 				<tr>
-					<td><font face="微軟正黑體,新細明體,times,serif">地址：</font></td>
-					<td><font face="微軟正黑體,新細明體,times,serif">地址：'.$com_adds.'</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">地址：'.$contract_cont_adds_a.'</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">地址：'.$contract_cont_adds_b.'</font></td>
 				</tr>
 				<tr>
-					<td><font face="微軟正黑體,新細明體,times,serif">統一編號：</font></td>
-					<td><font face="微軟正黑體,新細明體,times,serif">統一編號：'.$com_num.'</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">統一編號：'.$contract_cont_taxid_a.'</font></td>
+					<td><font face="微軟正黑體,新細明體,times,serif">統一編號：'.$contract_cont_taxid_b.'</font></td>
 				</tr>
 				<tr>
 					<td colspan="2">
@@ -763,8 +853,7 @@ if( !class_exists( 'VagabondPM' ) )
 									<font face="微軟正黑體,新細明體,times,serif">
 									<ol>
 										<li>開發方式：PHP / WordPress</li>
-										<li>預估工時：'.$work_day.'個工作日</li>
-										<li>預估開發期程：'.$kickoff_start.' 至 '.$kickoff_end.'</li>
+										<li>預估開發期程：<br>'.$kickoff_start.' 至 '.$kickoff_end.'<br>預估工時為：'.$work_day.'個工作日</li>
 										<li>一年保固：保固指原本規格需求內之功能確認可正常運作使用。</li>
 									</ol>
 									</font>
@@ -817,6 +906,7 @@ if( !class_exists( 'VagabondPM' ) )
 			$word->start(); 
 			echo $html; 
 			$word->save($wordname); 
+			return true;
 
 			// header('Content-Description: File Transfer');
 			// header('Content-Type: application/msword');
