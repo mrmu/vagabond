@@ -1,0 +1,1285 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vagabond v0.1\n"
+"POT-Creation-Date: 2014-03-13 14:20+0800\n"
+"PO-Revision-Date: 2014-03-21 13:44+0800\n"
+"Last-Translator: Audi Lu <mrmu@mrmu.com.tw>\n"
+"Language-Team: audilu <mrmu@mrmu.com.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;_n;_x\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../twentyeleven/404.php:17 ../twentytwelve/404.php:17
+#, fuzzy
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "抱歉! 這個頁面沒有您所需的資訊。"
+
+#: ../twentyeleven/404.php:21
+#, fuzzy
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr "我們似乎無法找到您要找的資訊，也許搜尋功能可以幫忙。"
+
+#: ../twentyeleven/404.php:28
+#, fuzzy
+msgid "Most Used Categories"
+msgstr "您最常用的特色項目標籤分類"
+
+#: ../twentyeleven/404.php:36
+#, fuzzy, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "每月封存：%s"
+
+#: ../twentyeleven/archive.php:25 ../twentytwelve/archive.php:29
+#, fuzzy, php-format
+msgid "Daily Archives: %s"
+msgstr "每日封存：%s"
+
+#: ../twentyeleven/archive.php:27 ../twentytwelve/archive.php:31
+#, fuzzy, php-format
+msgid "Monthly Archives: %s"
+msgstr "每月封存：%s"
+
+#: ../twentyeleven/archive.php:29 ../twentytwelve/archive.php:33
+#, fuzzy, php-format
+msgid "Yearly Archives: %s"
+msgstr "每年封存：%s"
+
+#: ../twentyeleven/archive.php:31 ../twentyten/archive.php:39
+#, fuzzy
+msgid "Blog Archives"
+msgstr "分類法封存"
+
+#: ../twentyeleven/archive.php:57 ../twentyeleven/author.php:74
+#: ../twentyeleven/category.php:50 ../twentyeleven/index.php:37
+#: ../twentyeleven/search.php:42 ../twentyeleven/tag.php:50
+#: ../twentyten/search.php:26 ../twentytwelve/content-none.php:13
+#: ../twentytwelve/index.php:49 ../twentytwelve/search.php:34
+#: ../vagabond/index.php:57
+#, fuzzy
+msgid "Nothing Found"
+msgstr "找不到任何資訊。"
+
+#: ../twentyeleven/archive.php:61 ../twentyeleven/author.php:78
+#: ../twentyeleven/category.php:54 ../twentyeleven/index.php:41
+#: ../twentyeleven/tag.php:54 ../twentyten/loop.php:35
+#, fuzzy
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr "我們似乎無法找到您要找的資訊，也許搜尋功能可以幫忙。"
+
+#: ../twentyeleven/author.php:28 ../twentyten/author.php:27
+#: ../twentytwelve/author.php:32
+#, fuzzy, php-format
+msgid "Author Archives: %s"
+msgstr "作者封存：%s"
+
+#: ../twentyeleven/author.php:49 ../twentyeleven/content-single.php:60
+#: ../twentyten/author.php:37 ../twentyten/loop-single.php:43
+#: ../twentytwelve/author.php:53 ../twentytwelve/content.php:53
+#, fuzzy, php-format
+msgid "About %s"
+msgstr "顧客訂單的相關附註"
+
+#: ../twentyeleven/category.php:19 ../twentyten/category.php:16
+#: ../twentytwelve/category.php:21
+#, fuzzy, php-format
+msgid "Category Archives: %s"
+msgstr "分類封存：%s"
+
+#: ../twentyeleven/comments.php:17 ../twentyten/comments.php:18
+#, fuzzy
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "請再一次輸入密碼"
+
+#: ../twentyeleven/comments.php:40 ../twentyeleven/comments.php:60
+#: ../twentytwelve/comments.php:42 ../vagabond/comments.php:42
+#, fuzzy
+msgid "Comment navigation"
+msgstr "迴響導覽"
+
+#: ../twentyeleven/comments.php:41 ../twentyeleven/comments.php:61
+#: ../twentytwelve/comments.php:43
+#, fuzzy
+msgid "&larr; Older Comments"
+msgstr "&larr; 舊迴響"
+
+#: ../twentyeleven/comments.php:42 ../twentyeleven/comments.php:62
+#: ../twentytwelve/comments.php:44
+#, fuzzy
+msgid "Newer Comments &rarr;"
+msgstr "新迴響 &rarr;"
+
+#: ../twentyeleven/comments.php:71 ../twentyten/comments.php:70
+#: ../twentytwelve/comments.php:53
+#, fuzzy
+msgid "Comments are closed."
+msgstr "迴響已關閉"
+
+#: ../twentyeleven/content-aside.php:16
+#: ../twentyeleven/content-featured.php:14
+#: ../twentyeleven/content-gallery.php:16
+#: ../twentyeleven/content-gallery.php:48 ../twentyeleven/content-image.php:15
+#: ../twentyeleven/content-link.php:16 ../twentyeleven/content-quote.php:14
+#: ../twentyeleven/content-status.php:15 ../twentyeleven/content.php:15
+#: ../twentyeleven/content.php:19 ../twentyeleven/showcase.php:120
+#: ../twentyeleven/showcase.php:199 ../twentyeleven/inc/widgets.php:89
+#: ../twentyten/loop.php:62 ../twentyten/loop.php:83 ../twentyten/loop.php:131
+#: ../twentytwelve/content-aside.php:13 ../twentytwelve/content-aside.php:20
+#: ../twentytwelve/content-image.php:17 ../twentytwelve/content-link.php:18
+#: ../twentytwelve/content-quote.php:17 ../twentytwelve/content-status.php:15
+#: ../twentytwelve/content.php:23
+#, fuzzy, php-format
+msgid "Permalink to %s"
+msgstr ""
+"此文發佈在 %1$s，請按此 <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">連結</a> 加入書籤。"
+
+#: ../twentyeleven/content-aside.php:17
+msgid "Aside"
+msgstr ""
+
+#: ../twentyeleven/content-aside.php:22 ../twentyeleven/content-image.php:21
+#: ../twentyeleven/content-link.php:22 ../twentyeleven/content-quote.php:24
+#: ../twentyeleven/content-status.php:21 ../twentyeleven/content.php:30
+#: ../twentytwelve/functions.php:313
+msgid "Reply"
+msgstr ""
+
+#: ../twentyeleven/content-aside.php:33 ../twentyeleven/content-gallery.php:32
+#: ../twentyeleven/content-image.php:27 ../twentyeleven/content-link.php:33
+#: ../twentyeleven/content-quote.php:35 ../twentyeleven/content-status.php:34
+#: ../twentyeleven/content.php:41 ../twentyeleven/functions.php:345
+#: ../twentyten/functions.php:255 ../twentyten/loop-attachment.php:104
+#: ../twentyten/loop.php:115 ../twentyten/loop.php:143
+#: ../twentytwelve/content-aside.php:15 ../twentytwelve/content-image.php:13
+#: ../twentytwelve/content-link.php:14 ../twentytwelve/content-quote.php:13
+#: ../twentytwelve/content-status.php:21 ../twentytwelve/content.php:39
+#, fuzzy
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "繼續閱讀 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../twentyeleven/content-aside.php:34
+#: ../twentyeleven/content-featured.php:23
+#: ../twentyeleven/content-gallery.php:54 ../twentyeleven/content-image.php:28
+#: ../twentyeleven/content-intro.php:18 ../twentyeleven/content-link.php:34
+#: ../twentyeleven/content-page.php:18 ../twentyeleven/content-quote.php:36
+#: ../twentyeleven/content-single.php:24 ../twentyeleven/content-status.php:35
+#: ../twentyeleven/content.php:42 ../twentyeleven/image.php:90
+#: ../twentyten/loop-attachment.php:105 ../twentyten/loop-page.php:29
+#: ../twentyten/loop-single.php:34 ../twentyten/loop.php:144
+#: ../twentytwelve/content-page.php:18 ../twentytwelve/content.php:40
+#: ../twentytwelve/image.php:92
+#, fuzzy
+msgid "Pages:"
+msgstr "頁："
+
+#: ../twentyeleven/content-aside.php:42 ../twentyeleven/content-gallery.php:87
+#: ../twentyeleven/content-image.php:64 ../twentyeleven/content-link.php:42
+#: ../twentyeleven/content-quote.php:69 ../twentyeleven/content-status.php:43
+#: ../twentyeleven/content.php:79 ../twentyeleven/showcase.php:201
+#: ../twentytwelve/content-aside.php:23 ../twentytwelve/content-image.php:23
+#: ../twentytwelve/content-link.php:21 ../twentytwelve/content-quote.php:20
+#: ../twentytwelve/content-status.php:27 ../twentytwelve/content.php:28
+#, fuzzy
+msgid "Leave a reply"
+msgstr "發表迴響"
+
+#: ../twentyeleven/content-aside.php:42 ../twentyeleven/content-gallery.php:87
+#: ../twentyeleven/content-image.php:64 ../twentyeleven/content-link.php:42
+#: ../twentyeleven/content-quote.php:69 ../twentyeleven/content-status.php:43
+#: ../twentyeleven/content.php:79 ../twentyeleven/showcase.php:201
+#, fuzzy
+msgid "<b>1</b> Reply"
+msgstr ""
+"特定的操作說明協助顧客完成比特幣支付。<br />您可以改變它，但請確認有使用到這"
+"些標籤： <b>{{{BITCOINS_AMOUNT}}}</b>, <b>{{{BITCOINS_ADDRESS}}}</b> 及 "
+"<b>{{{EXTRA_INSTRUCTIONS}}}</b> 這些給顧客觀看的標籤將被置換為特定的支付明細"
+"資訊。"
+
+#: ../twentyeleven/content-aside.php:42 ../twentyeleven/content-gallery.php:87
+#: ../twentyeleven/content-image.php:64 ../twentyeleven/content-link.php:42
+#: ../twentyeleven/content-quote.php:69 ../twentyeleven/content-status.php:43
+#: ../twentyeleven/content.php:79 ../twentyeleven/showcase.php:201
+#, fuzzy
+msgid "<b>%</b> Replies"
+msgstr ""
+"特定的操作說明協助顧客完成比特幣支付。<br />您可以改變它，但請確認有使用到這"
+"些標籤： <b>{{{BITCOINS_AMOUNT}}}</b>, <b>{{{BITCOINS_ADDRESS}}}</b> 及 "
+"<b>{{{EXTRA_INSTRUCTIONS}}}</b> 這些給顧客觀看的標籤將被置換為特定的支付明細"
+"資訊。"
+
+#: ../twentyeleven/content-aside.php:44
+#: ../twentyeleven/content-featured.php:45
+#: ../twentyeleven/content-gallery.php:90 ../twentyeleven/content-image.php:68
+#: ../twentyeleven/content-intro.php:19 ../twentyeleven/content-link.php:44
+#: ../twentyeleven/content-page.php:21 ../twentyeleven/content-quote.php:72
+#: ../twentyeleven/content-single.php:52 ../twentyeleven/content-status.php:45
+#: ../twentyeleven/content.php:82 ../twentyeleven/functions.php:525
+#: ../twentyeleven/functions.php:553 ../twentyeleven/image.php:41
+#: ../twentyten/loop-attachment.php:63 ../twentyten/loop-attachment.php:111
+#: ../twentyten/loop-page.php:30 ../twentyten/loop-single.php:56
+#: ../twentyten/loop.php:100 ../twentyten/loop.php:123
+#: ../twentyten/loop.php:165 ../twentytwelve/content-aside.php:26
+#: ../twentytwelve/content-image.php:26 ../twentytwelve/content-link.php:24
+#: ../twentytwelve/content-page.php:21 ../twentytwelve/content-quote.php:23
+#: ../twentytwelve/content-status.php:30 ../twentytwelve/content.php:46
+#: ../twentytwelve/functions.php:309 ../twentytwelve/image.php:37
+#, fuzzy
+msgid "Edit"
+msgstr "編輯"
+
+#: ../twentyeleven/content-featured.php:29
+#: ../twentyeleven/content-featured.php:38
+#: ../twentyeleven/content-gallery.php:62
+#: ../twentyeleven/content-gallery.php:72 ../twentyeleven/content-image.php:47
+#: ../twentyeleven/content-image.php:56 ../twentyeleven/content-quote.php:44
+#: ../twentyeleven/content-quote.php:54 ../twentyeleven/content-single.php:30
+#: ../twentyeleven/content-single.php:33 ../twentyeleven/content.php:51
+#: ../twentyeleven/content.php:63 ../twentytwelve/functions.php:332
+#: ../twentytwelve/functions.php:335
+msgid ", "
+msgstr ""
+
+#: ../twentyeleven/content-featured.php:31 ../twentyten/functions.php:501
+#, fuzzy, php-format
+msgid ""
+"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
+"title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"此文發佈在 %1$s，請按此 <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">連結</a> 加入書籤。"
+
+#: ../twentyeleven/content-featured.php:33 ../twentyten/functions.php:503
+#, fuzzy, php-format
+msgid ""
+"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
+"\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"此文發佈在 %1$s，請按此 <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">連結</a> 加入書籤。"
+
+#: ../twentyeleven/content-gallery.php:17
+#, fuzzy
+msgid "Gallery"
+msgstr "加入相簿"
+
+#: ../twentyeleven/content-gallery.php:66 ../twentyeleven/content-image.php:51
+#: ../twentyeleven/content-quote.php:48 ../twentyeleven/content.php:55
+#: ../twentyten/loop.php:151
+#, fuzzy, php-format
+msgid "<span class=\"%1$s\">Posted in</span> %2$s"
+msgstr ""
+"<span class=\"meta-author\">由 <strong><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></strong> </span> 發表於 <a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a>"
+
+#: ../twentyeleven/content-gallery.php:78 ../twentyeleven/content-image.php:59
+#: ../twentyeleven/content-quote.php:60 ../twentyeleven/content.php:69
+#: ../twentyten/loop.php:160
+#, fuzzy, php-format
+msgid "<span class=\"%1$s\">Tagged</span> %2$s"
+msgstr ""
+"<span class=\"meta-author\">由 <strong><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></strong> </span> 發表於 <a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a>"
+
+#: ../twentyeleven/content-image.php:16
+#, fuzzy
+msgid "Image"
+msgstr "圖片"
+
+#: ../twentyeleven/content-image.php:34
+#, fuzzy, php-format
+msgid ""
+"<a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s"
+"\">%3$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> "
+"<span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s"
+"\" rel=\"author\">%6$s</a></span></span>"
+msgstr ""
+"<span class=\"meta-author\">由 <strong><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></strong> </span> 發表於 <a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a>"
+
+#: ../twentyeleven/content-image.php:39 ../twentyeleven/functions.php:590
+#: ../twentyten/functions.php:484 ../twentyten/loop-attachment.php:36
+#: ../twentytwelve/functions.php:346
+#, fuzzy, php-format
+msgid "View all posts by %s"
+msgstr "查看 %s"
+
+#: ../twentyeleven/content-link.php:17 ../twentytwelve/content-link.php:12
+#, fuzzy
+msgid "Link"
+msgstr "這不是你的下載連結"
+
+#: ../twentyeleven/content-quote.php:15
+msgid "Quote"
+msgstr ""
+
+#: ../twentyeleven/content-single.php:35
+#, fuzzy, php-format
+msgid ""
+"This entry was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</a>. "
+"Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"此文發佈在 %1$s，請按此 <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">連結</a> 加入書籤。"
+
+#: ../twentyeleven/content-single.php:37
+#, fuzzy, php-format
+msgid ""
+"This entry was posted in %1$s by <a href=\"%6$s\">%5$s</a>. Bookmark the <a "
+"href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"此文發佈在 %1$s，請按此 <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">連結</a> 加入書籤。"
+
+#: ../twentyeleven/content-single.php:39
+#, fuzzy, php-format
+msgid ""
+"This entry was posted by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href="
+"\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"此文發佈在 %1$s，請按此 <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">連結</a> 加入書籤。"
+
+#: ../twentyeleven/content-single.php:64 ../twentyten/loop-single.php:47
+#: ../twentytwelve/content.php:57
+#, fuzzy, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "下一頁 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../twentyeleven/content-status.php:16
+#, fuzzy
+msgid "Status"
+msgstr "狀態"
+
+#: ../twentyeleven/content.php:16
+#, fuzzy
+msgid "Featured"
+msgstr "特色"
+
+#: ../twentyeleven/footer.php:27 ../twentyten/footer.php:33
+#: ../twentytwelve/footer.php:17
+#, fuzzy
+msgid "http://wordpress.org/"
+msgstr "WordPress.org專案"
+
+#: ../twentyeleven/footer.php:27 ../twentyten/footer.php:33
+#: ../twentytwelve/footer.php:17
+#, fuzzy
+msgid "Semantic Personal Publishing Platform"
+msgstr "您的個人比特幣地址"
+
+#: ../twentyeleven/footer.php:27 ../twentytwelve/footer.php:17
+#, fuzzy, php-format
+msgid "Proudly powered by %s"
+msgstr "Powered by WooCommerce"
+
+#: ../twentyeleven/functions.php:95 ../twentytwelve/functions.php:64
+#, fuzzy
+msgid "Primary Menu"
+msgstr "主要"
+
+#: ../twentyeleven/functions.php:164
+msgid "Wheel"
+msgstr ""
+
+#: ../twentyeleven/functions.php:170
+msgid "Shore"
+msgstr ""
+
+#: ../twentyeleven/functions.php:176
+msgid "Trolley"
+msgstr ""
+
+#: ../twentyeleven/functions.php:182
+msgid "Pine Cone"
+msgstr ""
+
+#: ../twentyeleven/functions.php:188
+msgid "Chessboard"
+msgstr ""
+
+#: ../twentyeleven/functions.php:194
+msgid "Lanterns"
+msgstr ""
+
+#: ../twentyeleven/functions.php:200
+msgid "Willow"
+msgstr ""
+
+#: ../twentyeleven/functions.php:206
+msgid "Hanoi Plant"
+msgstr ""
+
+#: ../twentyeleven/functions.php:394 ../twentytwelve/functions.php:206
+#, fuzzy
+msgid "Main Sidebar"
+msgstr "自訂 \"%s\" 側邊欄"
+
+#: ../twentyeleven/functions.php:403
+#, fuzzy
+msgid "Showcase Sidebar"
+msgstr "自訂 \"%s\" 側邊欄"
+
+#: ../twentyeleven/functions.php:405
+#, fuzzy
+msgid "The sidebar for the optional Showcase Template"
+msgstr "選填"
+
+#: ../twentyeleven/functions.php:413
+#, fuzzy
+msgid "Footer Area One"
+msgstr "小工具區"
+
+#: ../twentyeleven/functions.php:415 ../twentyeleven/functions.php:425
+#: ../twentyeleven/functions.php:435
+#, fuzzy
+msgid "An optional widget area for your site footer"
+msgstr "小工具區"
+
+#: ../twentyeleven/functions.php:423
+#, fuzzy
+msgid "Footer Area Two"
+msgstr "小工具區"
+
+#: ../twentyeleven/functions.php:433
+#, fuzzy
+msgid "Footer Area Three"
+msgstr "小工具區"
+
+#: ../twentyeleven/functions.php:453 ../twentyeleven/single.php:18
+#: ../twentytwelve/functions.php:250 ../twentytwelve/single.php:20
+#, fuzzy
+msgid "Post navigation"
+msgstr "迴響導覽"
+
+#: ../twentyeleven/functions.php:454 ../twentyten/loop.php:25
+#: ../twentyten/loop.php:178 ../twentytwelve/functions.php:251
+#, fuzzy
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 上一頁"
+
+#: ../twentyeleven/functions.php:455 ../twentyten/loop.php:26
+#: ../twentyten/loop.php:179 ../twentytwelve/functions.php:252
+#, fuzzy
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "下一頁 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../twentyeleven/functions.php:525 ../twentyten/functions.php:365
+#: ../twentytwelve/functions.php:277
+msgid "Pingback:"
+msgstr ""
+
+#: ../twentyeleven/functions.php:542
+#, fuzzy, php-format
+msgid "%1$s on %2$s <span class=\"says\">said:</span>"
+msgstr "%s <span class=\"says\">說：</span>"
+
+#: ../twentyeleven/functions.php:548 ../twentyten/functions.php:348
+#: ../twentytwelve/functions.php:298
+#, fuzzy, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+"發表於 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
+"\">%2$s</time></span>  <a href=\"%3$s\" title=\"Link to full-size image\">"
+"%4$s &times; %5$s</a> 在 <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%8$s</a>"
+
+#: ../twentyeleven/functions.php:557 ../twentyten/functions.php:341
+#: ../twentytwelve/functions.php:304
+#, fuzzy
+msgid "Your comment is awaiting moderation."
+msgstr "您的迴響正在等待驗證。"
+
+#: ../twentyeleven/functions.php:566
+#, fuzzy
+msgid "Reply <span>&darr;</span>"
+msgstr "%s <span class=\"says\">說：</span>"
+
+#: ../twentyeleven/functions.php:584
+#, fuzzy, php-format
+msgid ""
+"<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\">%4$s</time></"
+"a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class="
+"\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel="
+"\"author\">%7$s</a></span></span>"
+msgstr ""
+"<span class=\"meta-author\">由 <strong><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></strong> </span> 發表於 <a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a>"
+
+#: ../twentyeleven/header.php:45 ../twentyten/header.php:33
+#: ../twentytwelve/functions.php:181
+#, fuzzy, php-format
+msgid "Page %s"
+msgstr "頁面 %s"
+
+#: ../twentyeleven/header.php:129
+#, fuzzy
+msgid "Main menu"
+msgstr "功能表順序"
+
+#: ../twentyeleven/header.php:131
+#, fuzzy
+msgid "Skip to primary content"
+msgstr "主要"
+
+#: ../twentyeleven/header.php:132
+#, fuzzy
+msgid "Skip to secondary content"
+msgstr "次要"
+
+#: ../twentyeleven/image.php:18
+#, fuzzy
+msgid "Image navigation"
+msgstr "圖片"
+
+#: ../twentyeleven/image.php:19 ../twentytwelve/image.php:41
+#, fuzzy
+msgid "&larr; Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> 上一頁"
+
+#: ../twentyeleven/image.php:20 ../twentytwelve/image.php:42
+#, fuzzy
+msgid "Next &rarr;"
+msgstr "下一頁 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../twentyeleven/image.php:30
+#, fuzzy, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class="
+"\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> "
+"at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> "
+"in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr ""
+"發表於 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
+"\">%2$s</time></span>  <a href=\"%3$s\" title=\"Link to full-size image\">"
+"%4$s &times; %5$s</a> 在 <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%8$s</a>"
+
+#: ../twentyeleven/search.php:18 ../twentyten/search.php:16
+#: ../twentytwelve/search.php:18
+#, fuzzy, php-format
+msgid "Search Results for: %s"
+msgstr " %s 的搜尋結果："
+
+#: ../twentyeleven/search.php:46 ../twentyten/search.php:28
+#: ../twentytwelve/search.php:38
+#, fuzzy
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr "抱歉，找不到您要的資訊。要不要再搜尋其他關鍵字試試看？"
+
+#: ../twentyeleven/searchform.php:11 ../twentyeleven/searchform.php:12
+#: ../twentyeleven/searchform.php:13
+#, fuzzy
+msgid "Search"
+msgstr "搜尋 %a"
+
+#: ../twentyeleven/showcase.php:77
+#, fuzzy
+msgid "Featured Post"
+msgstr "特色"
+
+#: ../twentyeleven/showcase.php:150
+#, fuzzy, php-format
+msgid "Featuring: %s"
+msgstr "%s / %s"
+
+#: ../twentyeleven/showcase.php:160
+#, fuzzy
+msgid "Recent Posts"
+msgstr "Flatsome 最新文章"
+
+#: ../twentyeleven/sidebar.php:19 ../twentyten/sidebar.php:27
+#: ../twentytwelve/archive.php:35
+#, fuzzy
+msgid "Archives"
+msgstr "分類法封存"
+
+#: ../twentyeleven/sidebar.php:26 ../twentyten/sidebar.php:34
+#, fuzzy
+msgid "Meta"
+msgstr "新增&nbsp;meta"
+
+#: ../twentyeleven/single.php:19
+#, fuzzy
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> 上一頁"
+
+#: ../twentyeleven/single.php:20
+#, fuzzy
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "下一頁 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../twentyeleven/tag.php:19 ../twentyten/tag.php:16
+#: ../twentytwelve/tag.php:21 ../vagabond/tag.php:21
+#, fuzzy, php-format
+msgid "Tag Archives: %s"
+msgstr "標籤封存：%s"
+
+#: ../twentyeleven/inc/theme-options.php:55
+#: ../twentyeleven/inc/theme-options.php:474
+msgid "Color Scheme"
+msgstr ""
+
+#: ../twentyeleven/inc/theme-options.php:61
+#: ../twentyeleven/inc/theme-options.php:491
+#, fuzzy
+msgid "Link Color"
+msgstr "這不是你的下載連結"
+
+#: ../twentyeleven/inc/theme-options.php:62
+#, fuzzy
+msgid "Default Layout"
+msgstr "預設"
+
+#: ../twentyeleven/inc/theme-options.php:94
+#: ../twentyeleven/inc/theme-options.php:95
+#, fuzzy
+msgid "Theme Options"
+msgstr "佈景主題設定"
+
+#: ../twentyeleven/inc/theme-options.php:110
+#, fuzzy
+msgid ""
+"Some themes provide customization options that are grouped together on a "
+"Theme Options screen. If you change themes, options may change or disappear, "
+"as they are theme-specific. Your current theme, Twenty Eleven, provides the "
+"following Theme Options:"
+msgstr "佈景主題設定"
+
+#: ../twentyeleven/inc/theme-options.php:112
+#, fuzzy
+msgid ""
+"<strong>Color Scheme</strong>: You can choose a color palette of \"Light"
+"\" (light background with dark text) or \"Dark\" (dark background with light "
+"text) for your site."
+msgstr ""
+"判斷您如何選擇商品的屬性。<strong>文字</strong>允許手動輸入，透過商品頁面。而"
+"<strong>選擇</strong>屬性，可以從這裡定義，如果你打算使用屬性的變化，使用"
+"<strong>選擇</strong>"
+
+#: ../twentyeleven/inc/theme-options.php:113
+#, fuzzy
+msgid ""
+"<strong>Link Color</strong>: You can choose the color used for text links on "
+"your site. You can enter the HTML color or hex code, or you can choose "
+"visually by clicking the \"Select a Color\" button to pick from a color "
+"wheel."
+msgstr ""
+"判斷您如何選擇商品的屬性。<strong>文字</strong>允許手動輸入，透過商品頁面。而"
+"<strong>選擇</strong>屬性，可以從這裡定義，如果你打算使用屬性的變化，使用"
+"<strong>選擇</strong>"
+
+#: ../twentyeleven/inc/theme-options.php:114
+#, fuzzy
+msgid ""
+"<strong>Default Layout</strong>: You can choose if you want your site&#8217;"
+"s default layout to have a sidebar on the left, the right, or not at all."
+msgstr ""
+"<strong>您的佈景沒有宣告 WooCommerce 支援</strong> &#8211; if you encounter "
+"layout issues please read our integration guide or choose a WooCommerce "
+"theme :)"
+
+#: ../twentyeleven/inc/theme-options.php:116
+#, fuzzy
+msgid ""
+"Remember to click \"Save Changes\" to save any changes you have made to the "
+"theme options."
+msgstr "儲存變更"
+
+#: ../twentyeleven/inc/theme-options.php:118
+#, fuzzy
+msgid "For more information:"
+msgstr "更多相關資訊："
+
+#: ../twentyeleven/inc/theme-options.php:119
+#, fuzzy
+msgid ""
+"<a href=\"http://codex.wordpress.org/Appearance_Theme_Options_Screen\" "
+"target=\"_blank\">Documentation on Theme Options</a>"
+msgstr "佈景主題設定"
+
+#: ../twentyeleven/inc/theme-options.php:120
+#, fuzzy
+msgid ""
+"<a href=\"http://wordpress.org/support/\" target=\"_blank\">Support Forums</"
+"a>"
+msgstr ""
+"建議設定：'您的 Electrum 錢包'。 <a href='http://electrum.org/' "
+"target='_blank'>免費下載 Electrum 錢包</a>。"
+
+#: ../twentyeleven/inc/theme-options.php:127
+#, fuzzy
+msgid "Overview"
+msgstr "概況"
+
+#: ../twentyeleven/inc/theme-options.php:149
+msgid "Light"
+msgstr ""
+
+#: ../twentyeleven/inc/theme-options.php:155
+msgid "Dark"
+msgstr ""
+
+#: ../twentyeleven/inc/theme-options.php:173
+#, fuzzy
+msgid "Content on left"
+msgstr "內容"
+
+#: ../twentyeleven/inc/theme-options.php:178
+#, fuzzy
+msgid "Content on right"
+msgstr "內容"
+
+#: ../twentyeleven/inc/theme-options.php:183
+#, fuzzy
+msgid "One-column, no sidebar"
+msgstr "頁尾 1 (4 欄)"
+
+#: ../twentyeleven/inc/theme-options.php:273
+#, fuzzy
+msgid "Select a Color"
+msgstr "選擇"
+
+#: ../twentyeleven/inc/theme-options.php:276
+#, fuzzy, php-format
+msgid "Default color: %s"
+msgstr "預設時區為 %s"
+
+#: ../twentyeleven/inc/theme-options.php:312
+#, fuzzy, php-format
+msgid "%s Theme Options"
+msgstr "佈景主題設定"
+
+#: ../twentyeleven/inc/theme-options.php:498
+#, fuzzy
+msgid "Layout"
+msgstr ""
+"<strong>您的佈景沒有宣告 WooCommerce 支援</strong> &#8211; if you encounter "
+"layout issues please read our integration guide or choose a WooCommerce "
+"theme :)"
+
+#: ../twentyeleven/inc/widgets.php:19
+#, fuzzy
+msgid ""
+"Use this widget to list your recent Aside, Status, Quote, and Link posts"
+msgstr "Flatsome 最新文章"
+
+#: ../twentyeleven/inc/widgets.php:20
+msgid "Twenty Eleven Ephemera"
+msgstr ""
+
+#: ../twentyeleven/inc/widgets.php:52
+msgid "Ephemera"
+msgstr ""
+
+#: ../twentyeleven/inc/widgets.php:91 ../twentyeleven/inc/widgets.php:107
+#, fuzzy
+msgid "0 <span class=\"reply\">comments &rarr;</span>"
+msgstr "下一頁 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../twentyeleven/inc/widgets.php:91 ../twentyeleven/inc/widgets.php:107
+#, fuzzy
+msgid "1 <span class=\"reply\">comment &rarr;</span>"
+msgstr "下一頁 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../twentyeleven/inc/widgets.php:91 ../twentyeleven/inc/widgets.php:107
+#, fuzzy
+msgid "% <span class=\"reply\">comments &rarr;</span>"
+msgstr "下一頁 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../twentyeleven/inc/widgets.php:105
+#, fuzzy, php-format
+msgid "Link to %s"
+msgstr ""
+"您的訂單已建立&ldquo;%s&rdquo;若要支付此訂單，請使用下面的連結：<a href=\"%s"
+"\">付款</a>"
+
+#: ../twentyeleven/inc/widgets.php:157
+#, fuzzy
+msgid "Title:"
+msgstr "標題"
+
+#: ../twentyeleven/inc/widgets.php:160
+#, fuzzy
+msgid "Number of posts to show:"
+msgstr "顯示商品數量："
+
+#: ../twentyten/404.php:16 ../twentyten/loop.php:33
+#, fuzzy
+msgid "Not Found"
+msgstr "找不到任何資訊。"
+
+#: ../twentyten/404.php:18
+#, fuzzy
+msgid ""
+"Apologies, but the page you requested could not be found. Perhaps searching "
+"will help."
+msgstr "我們似乎無法找到您要找的資訊，也許搜尋功能可以幫忙。"
+
+#: ../twentyten/archive.php:33
+#, fuzzy, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "每日封存：%s"
+
+#: ../twentyten/archive.php:35
+#, fuzzy, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "每月封存：%s"
+
+#: ../twentyten/archive.php:37
+#, fuzzy, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "每年封存：%s"
+
+#: ../twentyten/comments.php:41 ../twentyten/comments.php:60
+#, fuzzy
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> 上一頁"
+
+#: ../twentyten/comments.php:42 ../twentyten/comments.php:61
+#, fuzzy
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "下一頁 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../twentyten/footer.php:33
+#, fuzzy, php-format
+msgid "Proudly powered by %s."
+msgstr "Powered by WooCommerce"
+
+#: ../twentyten/functions.php:93
+#, fuzzy
+msgid "Primary Navigation"
+msgstr "主要"
+
+#: ../twentyten/functions.php:145
+msgid "Berries"
+msgstr ""
+
+#: ../twentyten/functions.php:151
+msgid "Cherry Blossoms"
+msgstr ""
+
+#: ../twentyten/functions.php:157
+msgid "Concave"
+msgstr ""
+
+#: ../twentyten/functions.php:163
+msgid "Fern"
+msgstr ""
+
+#: ../twentyten/functions.php:169
+msgid "Forest Floor"
+msgstr ""
+
+#: ../twentyten/functions.php:175
+msgid "Inkwell"
+msgstr ""
+
+#: ../twentyten/functions.php:181
+#, fuzzy
+msgid "Path"
+msgstr "文件路徑"
+
+#: ../twentyten/functions.php:187
+msgid "Sunset"
+msgstr ""
+
+#: ../twentyten/functions.php:338
+#, fuzzy, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">說：</span>"
+
+#: ../twentyten/functions.php:348 ../twentyten/functions.php:365
+#: ../twentytwelve/functions.php:277
+#, fuzzy
+msgid "(Edit)"
+msgstr "編輯"
+
+#: ../twentyten/functions.php:384
+#, fuzzy
+msgid "Primary Widget Area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:386
+#, fuzzy
+msgid "The primary widget area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:395
+#, fuzzy
+msgid "Secondary Widget Area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:397
+#, fuzzy
+msgid "The secondary widget area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:406
+#, fuzzy
+msgid "First Footer Widget Area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:408
+#, fuzzy
+msgid "The first footer widget area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:417
+#, fuzzy
+msgid "Second Footer Widget Area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:419
+#, fuzzy
+msgid "The second footer widget area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:428
+#, fuzzy
+msgid "Third Footer Widget Area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:430
+#, fuzzy
+msgid "The third footer widget area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:439
+#, fuzzy
+msgid "Fourth Footer Widget Area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:441
+#, fuzzy
+msgid "The fourth footer widget area"
+msgstr "小工具區"
+
+#: ../twentyten/functions.php:475
+#, fuzzy, php-format
+msgid ""
+"<span class=\"%1$s\">Posted on</span> %2$s <span class=\"meta-sep\">by</"
+"span> %3$s"
+msgstr ""
+"<span class=\"meta-author\">由 <strong><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></strong> </span> 發表於 <a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a>"
+
+#: ../twentyten/functions.php:505
+#, fuzzy, php-format
+msgid ""
+"Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"此文發佈在 %1$s，請按此 <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">連結</a> 加入書籤。"
+
+#: ../twentyten/header.php:101 ../twentytwelve/header.php:44
+#: ../vagabond/header.php:47 ../vagabond/header.php:48
+#, fuzzy
+msgid "Skip to content"
+msgstr "內容"
+
+#: ../twentyten/loop-attachment.php:21
+#, fuzzy, php-format
+msgid "Return to %s"
+msgstr ""
+"沒有外掛被安裝或啟用。<a href=\"%1$s\" title=\"返回控制台\">返回控制台</a>"
+
+#: ../twentyten/loop-attachment.php:23
+#, fuzzy, php-format
+msgid "<span class=\"meta-nav\">&larr;</span> %s"
+msgstr "<span class=\"meta-nav\">&larr;</span> 上一頁"
+
+#: ../twentyten/loop-attachment.php:32
+#, fuzzy, php-format
+msgid "<span class=\"%1$s\">By</span> %2$s"
+msgstr ""
+"<span class=\"meta-author\">由 <strong><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></strong> </span> 發表於 <a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a>"
+
+#: ../twentyten/loop-attachment.php:43
+#, fuzzy, php-format
+msgid "<span class=\"%1$s\">Published</span> %2$s"
+msgstr ""
+"發表於 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
+"\">%2$s</time></span>  <a href=\"%3$s\" title=\"Link to full-size image\">"
+"%4$s &times; %5$s</a> 在 <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%8$s</a>"
+
+#: ../twentyten/loop-attachment.php:53
+#, fuzzy, php-format
+msgid "Full size is %s pixels"
+msgstr ""
+"發表於 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
+"\">%2$s</time></span>  <a href=\"%3$s\" title=\"Link to full-size image\">"
+"%4$s &times; %5$s</a> 在 <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%8$s</a>"
+
+#: ../twentyten/loop-attachment.php:56
+#, fuzzy
+msgid "Link to full-size image"
+msgstr ""
+"發表於 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
+"\">%2$s</time></span>  <a href=\"%3$s\" title=\"Link to full-size image\">"
+"%4$s &times; %5$s</a> 在 <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%8$s</a>"
+
+#: ../twentyten/loop.php:93
+#, fuzzy
+msgid "View Galleries"
+msgstr "查看"
+
+#: ../twentyten/loop.php:93 ../twentyten/loop.php:96
+#, fuzzy
+msgid "More Galleries"
+msgstr "更多相關資訊："
+
+#: ../twentyten/loop.php:96
+#, fuzzy
+msgid "View posts in the Gallery category"
+msgstr "查看"
+
+#: ../twentyten/loop.php:99 ../twentyten/loop.php:122
+#: ../twentyten/loop.php:164
+#, fuzzy
+msgid "Leave a comment"
+msgstr "發表迴響"
+
+#: ../twentyten/loop.php:99 ../twentyten/loop.php:122
+#: ../twentyten/loop.php:164
+#, fuzzy
+msgid "1 Comment"
+msgstr "<strong>1</strong> 則迴響"
+
+#: ../twentyten/loop.php:99 ../twentyten/loop.php:122
+#: ../twentyten/loop.php:164
+#, fuzzy
+msgid "% Comments"
+msgstr "迴響已關閉"
+
+#: ../twentytwelve/404.php:21
+#, fuzzy
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "我們似乎無法找到您要找的資訊，也許搜尋功能可以幫忙。"
+
+#: ../twentytwelve/content-aside.php:23 ../twentytwelve/content-image.php:23
+#: ../twentytwelve/content-link.php:21 ../twentytwelve/content-quote.php:20
+#: ../twentytwelve/content-status.php:27 ../twentytwelve/content.php:28
+#, fuzzy
+msgid "1 Reply"
+msgstr "%1$s"
+
+#: ../twentytwelve/content-aside.php:23 ../twentytwelve/content-image.php:23
+#: ../twentytwelve/content-link.php:21 ../twentytwelve/content-quote.php:20
+#: ../twentytwelve/content-status.php:27 ../twentytwelve/content.php:28
+msgid "% Replies"
+msgstr ""
+
+#: ../twentytwelve/content-none.php:17 ../twentytwelve/index.php:53
+#: ../vagabond/index.php:61
+#, fuzzy
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post."
+msgstr "我們似乎無法找到您要找的資訊，也許搜尋功能可以幫忙。"
+
+#: ../twentytwelve/content.php:14
+#, fuzzy
+msgid "Featured post"
+msgstr "特色"
+
+#: ../twentytwelve/functions.php:208
+#, fuzzy
+msgid ""
+"Appears on posts and pages except the optional Front Page template, which "
+"has its own widgets"
+msgstr "注意：如果你啟用此選項，某些商店頁面有子主題 - 子網頁將無法作用"
+
+#: ../twentytwelve/functions.php:216
+#, fuzzy
+msgid "First Front Page Widget Area"
+msgstr "小工具區"
+
+#: ../twentytwelve/functions.php:218 ../twentytwelve/functions.php:228
+#, fuzzy
+msgid ""
+"Appears when using the optional Front Page template with a page set as "
+"Static Front Page"
+msgstr "沒有設置頁面"
+
+#: ../twentytwelve/functions.php:226
+#, fuzzy
+msgid "Second Front Page Widget Area"
+msgstr "小工具區"
+
+#: ../twentytwelve/functions.php:292
+#, fuzzy
+msgid "Post author"
+msgstr "作者："
+
+#: ../twentytwelve/functions.php:352
+#, fuzzy, php-format
+msgid ""
+"This entry was posted in %1$s and tagged %2$s on %3$s<span class=\"by-author"
+"\"> by %4$s</span>."
+msgstr ""
+"<span class=\"meta-author\">由 <strong><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></strong> </span> 發表於 <a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a>"
+
+#: ../twentytwelve/functions.php:354
+#, fuzzy, php-format
+msgid ""
+"This entry was posted in %1$s on %3$s<span class=\"by-author\"> by %4$s</"
+"span>."
+msgstr ""
+"<span class=\"meta-author\">由 <strong><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></strong> </span> 發表於 <a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a>"
+
+#: ../twentytwelve/functions.php:356
+#, fuzzy, php-format
+msgid "This entry was posted on %3$s<span class=\"by-author\"> by %4$s</span>."
+msgstr ""
+"<span class=\"meta-author\">由 <strong><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></strong> </span> 發表於 <a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a>"
+
+#: ../twentytwelve/header.php:43 ../vagabond/header.php:46
+#, fuzzy
+msgid "Menu"
+msgstr "功能表順序"
+
+#: ../twentytwelve/image.php:26
+#, fuzzy, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class="
+"\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></"
+"span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; "
+"%5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</"
+"a>."
+msgstr ""
+"發表於 <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
+"\">%2$s</time></span>  <a href=\"%3$s\" title=\"Link to full-size image\">"
+"%4$s &times; %5$s</a> 在 <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%8$s</a>"
+
+#: ../twentytwelve/index.php:38 ../vagabond/index.php:46
+#, fuzzy
+msgid "No posts to display"
+msgstr "Flatsome 最新文章"
+
+#: ../twentytwelve/index.php:42 ../vagabond/index.php:50
+#, fuzzy, php-format
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr "準備好發表您的首篇文章了嗎？<a href=\"%1$s\">從這裡開始</a>。"
+
+#: ../vagabond/comments.php:43
+#, fuzzy
+msgid "&larr; Older Issues"
+msgstr "&larr; 舊迴響"
+
+#: ../vagabond/comments.php:44
+#, fuzzy
+msgid "Newer Issues &rarr;"
+msgstr "新迴響 &rarr;"
+
+#: ../vagabond/comments.php:53
+#, fuzzy
+msgid "Issues are closed."
+msgstr "迴響已關閉"
+
+#: ../vagabond/comments.php:65
+#, fuzzy
+msgid "Your Good Name"
+msgstr "很好"
+
+#: ../vagabond/comments.php:67
+#, fuzzy
+msgid "Your Email Please"
+msgstr "您的電子郵件地址的帳戶已經被註冊。請先登入"
+
+#: ../vagabond/comments.php:73
+#, fuzzy
+msgid "Comment Description"
+msgstr "簡介"
+
+#: ../vagabond/functions.php:62
+#, fuzzy
+msgid "Project State"
+msgstr "地區"
+
+#: ../vagabond/functions.php:73
+#, fuzzy
+msgid "Status："
+msgstr "狀態"
+
+#: ../vagabond/functions.php:89
+msgid "Projects"
+msgstr ""
+
+#: ../vagabond/functions.php:90
+#, fuzzy
+msgid "Project"
+msgstr "WordPress.org專案"
+
+#: ../vagabond/functions.php:105
+#, fuzzy
+msgid "Project Category"
+msgstr "WordPress.org專案"
+
+#: ../vagabond/functions.php:162
+#, fuzzy
+msgid "Comment Title: "
+msgstr ""
+"Trackbacks已關閉，但您可以<a class=\"comment-link\" href=\"#respond\" title="
+"\"Post a comment\">發表迴響</a>。"
+
+#: ../vagabond/functions.php:163
+msgid "Priority: "
+msgstr "優先序："
+
+#: ../vagabond/functions.php:165
+#, fuzzy
+msgid "High: "
+msgstr "按價格排序: 低至高"
+
+#: ../vagabond/functions.php:166
+msgid "Medium: "
+msgstr ""
+
+#: ../vagabond/functions.php:167
+msgid "Low: "
+msgstr "低"
